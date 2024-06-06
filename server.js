@@ -55,6 +55,10 @@ app.get('/film/:filmId/edit', async function (req, res) {
   }
 })
 
+app.put("/film/:filmId", async function(req, res){
+  await Film.findByIdAndUpdate(req.params.filmId, req.body);
+  res.redirect(`/film/${req.params.filmId}`);
+});
 
 app.delete("/film/:filmId", async function (req, res) {
   await Film.findByIdAndDelete(req.params.filmId);
