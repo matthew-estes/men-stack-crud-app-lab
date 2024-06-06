@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Film</title>
+  </head>
+  <body>
+    <h1>Edit <%= film.title %></h1>
+    <form action="/film/<%=film._id%>?_method=PUT" method="POST">
+      <label for="title">Title:</label>
+      <input type="text" name="title" value="<%=film.title%>"/>
+
+      <label for="personalRating">Personal Rating:</label>
+      <input type="number" min="0" max="10" name="personalRating" />
+
+      <label for="releaseYear">Release Year:</label>
+      <input type="text" name="releaseYear" />
+
+      <label for="genre">Genre:</label>
+      <select name="genre" id="genre">
+        <option value="Action">Action</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Crime">Crime</option>
+        <option value="Drama">Drama</option>
+        <option value="Horror">Horror</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Romantic">Romantic</option>
+        <option value="Sci-Fi">Sci-Fi</option>
+      </select>
+
+      <label for="director">Director:</label>
+      <input type="text" name="director" />
+
+      <label for="actor">Actor:</label>
+      <input type="text" name="actor" />
+
+      <button type="submit">Update Film</button>
+    </form>
+    <a href="/film">Back to Film Library</a>
+  </body>
+</html>
