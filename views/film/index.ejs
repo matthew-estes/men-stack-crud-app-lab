@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Film Index</title>
+  </head>
+  <body>
+    <h1>All Films</h1>
+    <ul>
+      <% film.forEach(film => {%>
+      <li><a href="/film/<%= film._id %>"><%= film.title %></a></li>
+      <% }); %>
+    </ul>
+    <a href="/film/new">Add a film</a>
+  </body>
+</html>
