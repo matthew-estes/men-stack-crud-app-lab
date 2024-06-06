@@ -12,6 +12,9 @@
     <p>Director: <%= film.director %></p>
     <p>Actor: <%= film.actor %></p>
 
+    <form action="/film/<%=film._id%>?_method=DELETE" method="POST">
+      <button type="submit">Delete <%= film.title %></button>
+    </form>
     <a href="/film">Back to Film Library</a>
   </body>
 </html>
