@@ -6,12 +6,12 @@
     <title><%= film.title %></title>
   </head>
   <body>
-    <h1><%= film.title %></h1>
-    <p>Release Year: <%= film.releaseYear %></p>
+    <h1><%= film.title %>, rating: <%=film.personalRating %></h1>
+    <p>Released: <%= film.releaseYear %></p>
+    <p>Genre: <%= film.genre %></p>
     <p>Director: <%= film.director %></p>
-    <p>Star: <%= film.star %></p>
-    <p>Personal Rating: <%= film.personalRating %></p>
-    
-    <a href="/">Back to Films</a>
+    <p>Actor: <%= film.actor %></p>
+
+    <a href="/film">Back to Film Library</a>
   </body>
 </html>

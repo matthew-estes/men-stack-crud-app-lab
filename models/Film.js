@@ -2,10 +2,14 @@ const mongoose = require("mongoose");
 
 const filmSchema = new mongoose.Schema({
   title: { type: String, required: true },
-  releaseYear: Number,
+  genre: {
+    type: String,
+    enum: ["Action", "Comedy", "Crime", "Drama", "Horror", "Mystery", "Romantic", "Sci-Fi"],
+    required: true,
+  },
+  releaseYear: String,
   director: String,
-  star: String,
-  genre: { type: String, enum: ['Action', 'Comedy', 'Drama', 'Horror'], required: true },
+  actor: String,
   personalRating: Number,
 });
 
